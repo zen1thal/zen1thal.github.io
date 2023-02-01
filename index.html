@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zviatos</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+
+
+
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo">.ss{}</div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                            <a aria-current="page" class="active" href="/">.ss</a>
+
+                        </li>
+                        <!-- <li>
+                            <a href="about.html">.about</a>
+                        </li> -->
+                        <li>
+                            <a id="email" href=" mailto:sviatoslav.syniuk2003@gmail.com"
+                                title="You can contact me by email">.email()</a>
+                        </li>
+                        <li>
+                            <a class="github" href="https://github.com/zviatos" title="GitHub" target="_blank"><img
+                                    src="images/github.png"></a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="https://www.linkedin.com/in/sviatoslav-syniuk/" title="GitHub"
+                                target="_blank"><img src="images/linkedinicon.png"></a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="https://www.instagram.com/zviatos/" title="instagram"
+                                target="_blank"><img src="images/instagram.png"></a>
+                        </li>
+
+                    </ul>
+
+
+
+
+                </nav>
+            </div>
+        </header>
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function () {
+                navBar = document.querySelector(".header-nav");
+                navBar.classList.toggle("active");
+            }
+        </script>
+
+
+        <div class="static-container">
+
+
+
+            <div class="other">
+                <h1 class="welcome">Hello there!
+                </h1>
+
+                <div class="me">
+                    <h2>
+                        I am
+                        <span class="namesur">Sviatoslav</span>
+                        <span class="namesur">Syniuk</span>
+                        .
+                    </h2>
+                </div>
+                <div class="job">Full-Stack Developer</div>
+                <a class="cv" href="./zviatosCV.pdf" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    CV
+                </a>
+
+            </div>
+
+
+            <div class="card" data-tilt data-tilt-glare>
+                <div class="photo-cont">
+                    <img src="images/avatar.jpg" alt="" class="avatar">
+                </div>
+                <h1 class="card-name">About Me</h1>
+                <p class="hobbies">Studying at <span class="cesur">Cesur</span> to improve my skills of web development.
+                    I
+                    love
+                    listening to music, going to the
+                    gym and playing games. You got my email for any suggestion.</p>
+                <a href="mailto:sviatoslav.syniuk2003@gmail.com" class="button">Email Me</a>
+            </div>
+
+
+            <script src="vanilla-tilt.js"></script>
+        </div>
+
+
+
+
+        <footer>
+            <div class="copy">
+                <p>©2023 Sviatoslav Syniuk</p>
+            </div>
+
+            <div class="contact">
+                Contact: sviatoslav.syniuk2003@gmail.com
+            </div>
+
+
+        </footer>
+    </body>
+
+
+</html>
