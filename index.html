@@ -16,13 +16,8 @@
         <header>
             <div class="header-container">
                 <div class="logo">.ss{}</div>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
 
-                </div>
-                <nav class="header-nav">
+                <nav class="header-nav" id="navMenu">
                     <ul>
                         <li>
                             <a aria-current="page" class="active" href="/">.ss</a>
@@ -49,20 +44,17 @@
                         </li>
 
                     </ul>
-
-
-
-
                 </nav>
+                <div class="menu" id="menu">
+                    <div>
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
+                    </div>
+                </div>
             </div>
         </header>
-        <script>
-            hamburger = document.querySelector(".hamburger");
-            hamburger.onclick = function () {
-                navBar = document.querySelector(".header-nav");
-                navBar.classList.toggle("active");
-            }
-        </script>
+
 
 
         <div class="static-container">
@@ -111,8 +103,6 @@
         </div>
 
 
-
-
         <footer>
             <div class="copy">
                 <p>©2023 Sviatoslav Syniuk</p>
@@ -124,6 +114,16 @@
 
 
         </footer>
+        <script>
+            var menu = document.getElementById("menu");
+            var navMenu = document.getElementById("navMenu");
+
+            menu.addEventListener("click", () => {
+                menu.classList.toggle("openmenu");
+                navMenu.classList.toggle("active");
+            })
+
+        </script>
     </body>
 
 
