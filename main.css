@@ -121,13 +121,6 @@ header {
   .menu {
     display: block;
   }
-  .static-container {
-    grid-template-columns: 1fr;
-  }
-  .other,
-  .card {
-    width: 100%;
-  }
 }
 .header-nav.active {
   display: block;
