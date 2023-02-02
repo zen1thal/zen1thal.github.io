@@ -114,13 +114,13 @@
 
         </footer>
         <script>
-            var menu = document.getElementById("menu");
-            var navMenu = document.getElementById("navMenu");
+            const menu = document.getElementById("menu");
+            const navMenu = document.getElementById("navMenu");
 
-            menu.addEventListener("click", () => {
+            menu.addEventListener("click", function () {
                 menu.classList.toggle("openmenu");
                 navMenu.classList.toggle("active");
-            })
+            });
 
         </script>
     </body>
