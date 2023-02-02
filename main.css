@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(0, 0, 0);
+  background: #444444;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -81,9 +81,9 @@ header {
 }
 
 .header-nav ul li a {
-  background: #000000;
+  background: #444444;
   display: block;
-  color: #9e9898;
+  color: #989494;
   padding: 20px 70px;
   text-decoration: none;
   font-size: 25px;
@@ -93,11 +93,7 @@ header {
   transition: 0.6s ease;
 }
 .header-nav ul li a:hover {
-  color: #682ae9;
-}
-
-.header-nav ul li a.active {
-  color: white;
+  color: #84a07c;
 }
 .instagram {
   width: 5px;
@@ -116,7 +112,7 @@ h2 {
   font-size: 60px;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 1px #682ae9;
+  -webkit-text-stroke: 1px #708090;
   background: url(images/back.png);
   -webkit-background-clip: text;
   background-position: 0 0;
@@ -129,18 +125,16 @@ h2 {
 }
 
 .job {
-  color: #54515a;
+  color: #575d90;
   font-size: 30px;
   font-weight: 700;
   padding: 30px 0 0 0px;
 }
 .static-container {
   position: relative;
-  padding: calc(40vh - 10.5rem) 0 0;
-  margin: 0 25vw;
-  min-height: 89vh;
-  perspective: 900px;
-  perspective-origin: 50% 50vh;
+  padding: calc(30vh - 10.5rem) 0 0;
+  margin: 0 15vw;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1px;
@@ -153,7 +147,7 @@ h2 {
   position: relative;
   display: inline-block;
   padding: 15px 50px;
-  color: #682ae9;
+  color: #84a07c;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-decoration: none;
@@ -161,9 +155,9 @@ h2 {
   transition: 0.2s;
 }
 .cv:hover {
-  color: #280548;
-  background: #682ae9;
-  box-shadow: 0 0 10px #682ae9, 0 0 40px #682ae9, 0 0 80px #682ae9;
+  color: #444444;
+  background: #84a07c;
+  box-shadow: 0 0 10px #84a07c, 0 0 40px #84a07c, 0 0 80px #84a07c;
 }
 
 footer {
@@ -184,7 +178,7 @@ footer {
   padding: 50px;
 }
 .card {
-  background-color: hsl(0, 3%, 77%);
+  background-color: #84a07c;
   padding: 30px;
   width: 440px;
   height: 500px;
@@ -202,7 +196,7 @@ footer {
 .card-name {
   position: relative;
   text-decoration: underline;
-  text-decoration-color: #682ae9;
+  text-decoration-color: #575d90;
   text-decoration-thickness: 5px;
 }
 
@@ -211,7 +205,7 @@ footer {
   display: inline;
   text-decoration: none;
   color: #ffffff;
-  background-color: #682ae9;
+  background-color: #575d90;
   padding: 0.5em 1.25em;
   border-radius: 10px;
 }
