@@ -113,15 +113,6 @@ header {
 .header-nav ul li a:hover {
   color: #84a07c;
 }
-@media only screen and (max-width: 767px) {
-  .header-nav {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-}
 .header-nav.active {
   display: block;
   position: absolute;
@@ -133,6 +124,33 @@ header {
 }
 .instagram {
   width: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .header-nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+  .static-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "other"
+      "card";
+  }
+}
+
+.static-container {
+  position: relative;
+  padding: calc(30vh - 10.5rem) 0 0;
+  margin: 0 15vw;
+  min-height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "other" "card";
 }
 .welcome {
   color: #ffffff;
@@ -166,16 +184,6 @@ h2 {
   font-weight: 700;
   padding: 30px 0 0 0px;
 }
-.static-container {
-  position: relative;
-  padding: calc(30vh - 10.5rem) 0 0;
-  margin: 0 15vw;
-  min-height: 50vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1px;
-}
-
 .cv {
   margin: 50px 0 0 0;
   font-size: 30px;
