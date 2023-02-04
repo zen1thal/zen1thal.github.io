@@ -116,16 +116,18 @@ header {
 .header-nav.active {
   display: block;
   position: absolute;
-  top: 60px;
+  top: 10px;
   right: 0;
   background: #444444;
   width: 100%;
+  height: 50%;
   padding: 20px;
 }
+
 .instagram {
   width: 5px;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 767px) {
   .header-nav {
     display: none;
   }
@@ -134,15 +136,19 @@ header {
     display: block;
   }
   .static-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "other"
-      "card";
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-nav {
+    display: block;
+  }
+  .menu {
+    display: none;
   }
 }
 
-.static-container {
+/* .static-container {
   position: relative;
   padding: calc(30vh - 10.5rem) 0 0;
   margin: 0 15vw;
@@ -151,7 +157,28 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "other" "card";
+} */
+.static-container {
+  display: flex;
+  padding: calc(30vh - 10.5rem) 0 0;
+  margin: 0 15vw;
+  min-height: 50vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+#other {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  #card,
+  #other {
+    width: 100%;
+  }
+}
+
 .welcome {
   color: #ffffff;
   font-size: 70px;
@@ -204,19 +231,6 @@ h2 {
   box-shadow: 0 0 10px #84a07c, 0 0 40px #84a07c, 0 0 80px #84a07c;
 }
 
-footer {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  gap: 200px;
-  text-align: center;
-  justify-content: center;
-  color: #ffffff;
-  padding: 20px;
-  margin-top: auto;
-  font-weight: 500;
-}
-
 .other {
   width: 750px;
   padding: 50px;
@@ -224,7 +238,7 @@ footer {
 .card {
   background-color: #84a07c;
   padding: 20px;
-  width: 44%;
+  width: 25%;
   height: 500px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s;
@@ -265,4 +279,29 @@ footer {
 }
 .cesur {
   font-weight: 550;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 20px;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.copy {
+  margin-right: 20px;
+}
+
+.contact {
+  margin-left: 20px;
 }
