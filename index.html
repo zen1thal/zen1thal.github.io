@@ -5,6 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>zviatos</title>
         <link rel="stylesheet" type="text/css" href="main.css" />
 
@@ -15,41 +18,38 @@
     <body>
         <header>
 
-            <div class="logo">.ss{}</div>
+            <div>
+                <img class="logo" src="logo.png" alt="">
+            </div>
 
-            <nav class="header-nav" id="navMenu">
+            <nav class="header-nav">
                 <ul>
-                    <li>
+                    <li style="--clr:#575d90;">
                         <a aria-current="page" class="active" href="/">.ss</a>
 
                     </li>
-                    <li>
+                    <li style="--clr:#575d90;">
                         <a id="email" href=" mailto:sviatoslav.syniuk2003@gmail.com"
                             title="You can contact me by email">.email</a>
                     </li>
-                    <li>
-                        <a class="github" href="https://github.com/zviatos" title="GitHub" target="_blank"><img
-                                src="images/github.png"></a>
+                    <li style="--clr:#575d90;">
+                        <a class="github" href="https://github.com/zviatos" title="GitHub" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
                     </li>
-                    <li>
+                    <li style="--clr:#575d90;">
                         <a class="linkedin" href="https://www.linkedin.com/in/sviatoslav-syniuk/" title="LinkdIn"
-                            target="_blank"><img src="images/linkedinicon.png"></a>
+                            target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
-                    <li>
+                    <li style="--clr:#575d90;">
                         <a class="instagram" href="https://www.instagram.com/zviatos/" title="Instagram"
-                            target="_blank"><img src="images/instagram.png"></a>
+                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </li>
 
 
                 </ul>
+
             </nav>
-            <div class="menu" id="menu">
-                <div>
-                    <span class="line1"></span>
-                    <span class="line2"></span>
-                    <span class="line3"></span>
-                </div>
-            </div>
+            <i class="fa-solid fa-bars"></i>
         </header>
 
 
@@ -112,13 +112,6 @@
 
         </footer>
         <script>
-            const menu = document.getElementById("menu");
-            const navMenu = document.getElementById("navMenu");
-
-            menu.addEventListener("click", function () {
-                menu.classList.toggle("openmenu");
-                navMenu.classList.toggle("active");
-            });
         </script>
     </body>
 
