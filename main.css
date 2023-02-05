@@ -6,11 +6,16 @@
   --slate: #8892b0;
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+a {
+  text-decoration: none;
+}
+
 * {
   padding: 0;
   margin: 0;
-  text-decoration: none;
+
   list-style: none;
   box-sizing: border-box;
 }
@@ -46,16 +51,16 @@ ul li {
   list-style: none;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: var(--transition);
 }
 ul li a {
   position: relative;
   color: var(--lightest-slate);
-  text-decoration: none;
+
   font-size: 2em;
   font-weight: 650;
   margin: 0 5px;
-  transition: 0.5s;
+  transition: var(--transition);
 }
 ul li:hover a {
   color: var(--light-blue);
@@ -157,21 +162,20 @@ h2 {
   font-weight: 700;
   padding: 30px 0 0 0px;
 }
-.cv {
+.resume {
   margin: 50px 0 0 0;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
   display: inline-block;
   padding: 15px 50px;
   color: var(--light-blue);
-  text-transform: uppercase;
   letter-spacing: 4px;
-  text-decoration: none;
+
   overflow: hidden;
   transition: 0.2s;
 }
-.cv:hover {
+.resume:hover {
   color: var(--navy);
   background: var(--light-blue);
   box-shadow: 0 0 10px var(--light-blue), 0 0 40px var(--light-blue),
@@ -203,12 +207,13 @@ h2 {
   color: var(--lightest-slate);
   text-decoration: underline;
   text-decoration-color: var(--light-blue);
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
 }
 
 .button {
   cursor: pointer;
-  text-decoration: none;
+
   color: var(--light-blue);
   background-color: var(--light-navy);
   border: 1px solid var(--light-blue);
@@ -239,7 +244,16 @@ footer {
   margin-top: auto;
   font-weight: 500;
 }
-
+.designed {
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: 1;
+  transition: var(--transition);
+}
+.designed:hover {
+  color: var(--light-blue);
+}
 @media (max-width: 767px) {
   footer {
     flex-direction: column;
