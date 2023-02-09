@@ -49,6 +49,13 @@ header {
 .logo {
   cursor: pointer;
   width: 100px;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+.logo:hover {
+  cursor: pointer;
+  width: 100px;
+  filter: grayscale(0%);
 }
 
 .header-nav ul {
@@ -143,7 +150,6 @@ h2 {
   display: inline-block;
   padding: 15px 50px;
   color: var(--light-blue);
-  letter-spacing: 1px;
   overflow: hidden;
   transition: 0.2s;
 }
@@ -264,7 +270,6 @@ footer {
   footer {
     font-size: var(--fz-xl);
   }
-
 }
 @media screen and (max-width: 1100px) {
   .fa-solid {
