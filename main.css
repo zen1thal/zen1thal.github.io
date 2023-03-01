@@ -17,6 +17,7 @@
   --fz-xxl: 22px;
   --fz-heading: 32px;
   --fz-heading-t: 40px;
+  --fz-heading-l: 58px;
 }
 
 a {
@@ -39,7 +40,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 3%;
+  padding: 0px 6%;
   background-color: rgba(10, 25, 47, 0.85);
   box-shadow: 0 10px 30px -10px var(--navy-shadow);
 }
@@ -242,7 +243,7 @@ footer {
   .welcome,
   .namesur,
   h2 {
-    font-size: var(--fz-heading-t);
+    font-size: var(--fz-heading-l);
   }
   .job,
   .resume {
@@ -255,18 +256,20 @@ footer {
     width: 140px;
   }
   #card {
-    width: 30%;
+    width: 20%;
+    height: 20%;
   }
   #other {
-    width: 50%;
+    width: 40%;
   }
 
   .static-container {
     flex-direction: row;
-    gap: 50px;
+    gap: 100px;
     margin: 0;
     padding: calc(30vh - 10.5rem) 0 0;
   }
+
   footer {
     font-size: var(--fz-xl);
   }
