@@ -300,10 +300,9 @@ footer {
     z-index: 1;
     transition: var(--transition);
   }
-  ul {
+  .header-nav ul {
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
   }
   #back_menu {
     position: fixed;
