@@ -22,16 +22,15 @@
         </a>
 
       </div>
-
-      <nav class="header-nav">
+      <i class="fa-solid fa-bars" id="hamburger"></i>
+      <div id="back_menu"></div>
+      <nav class="header-nav" id="nav">
         <ul>
           <li>
-            <a id="email" href=" mailto:sviatoslav.syniuk2003@gmail.com"><span
-                class="dot">.</span>contact</a>
+            <a id="email" href=" mailto:sviatoslav.syniuk2003@gmail.com"><span class="dot">.</span>contact</a>
           </li>
           <li>
-            <a class="github" href="https://github.com/zviatos" target="_blank"><i
-                class="fa-brands fa-github"></i></a>
+            <a class="github" href="https://github.com/zviatos" target="_blank"><i class="fa-brands fa-github"></i></a>
           </li>
           <li>
             <a class="linkedin" href="https://www.linkedin.com/in/sviatoslav-syniuk/" target="_blank"><i
@@ -46,7 +45,7 @@
         </ul>
 
       </nav>
-      <i class="fa-solid fa-bars" id="hamburger"></i>
+
 
     </header>
 
@@ -101,10 +100,18 @@
     </footer>
 
     <script>
-      document.getElementById("hamburger").onclick = function () {
-
+      document.getElementById("hamburger").addEventListener("click", mostrar_menu);
+      document.getElementById("back_menu").addEventListener("click", ocultar_menu);
+      nav = document.getElementById("nav");
+      background_menu = document.getElementById("back_menu");
+      function mostrar_menu() {
+        nav.style.right = "0px";
+        background_menu.style.display = "block";
       }
-
+      function ocultar_menu() {
+        nav.style.right = "-400px";
+        background_menu.style.display = "none";
+      }
     </script>
   </body>
 
