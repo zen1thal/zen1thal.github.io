@@ -62,7 +62,7 @@ header {
 .header-nav ul {
   position: relative;
   display: flex;
-  gap: 150px;
+  gap: 80px;
 }
 ul li {
   position: relative;
@@ -303,6 +303,7 @@ footer {
   .header-nav ul {
     display: flex;
     flex-direction: column;
+    margin-top: 80%;
   }
   #back_menu {
     position: fixed;
