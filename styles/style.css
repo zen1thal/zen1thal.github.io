@@ -282,6 +282,13 @@ footer {
   }
 }
 @media screen and (max-width: 1100px) {
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+
   .fa-solid {
     display: block;
   }
@@ -332,13 +339,13 @@ footer {
   }
   #card,
   #other {
-    width: 60%;
+    width: 70%;
   }
 
   .static-container {
     flex-direction: column;
     gap: 50px;
-    margin: 0;
+    margin-top: 200px;
     padding: calc(20vh - 10.5rem) 0 0;
   }
 }
@@ -346,7 +353,12 @@ footer {
   .fa-solid {
     display: block;
   }
-
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
   .header-nav {
     position: fixed;
     margin-left: 70%;
@@ -398,7 +410,7 @@ footer {
   .static-container {
     flex-direction: column;
     gap: 50px;
-    margin: 0;
+    margin-top: 200px;
     padding: calc(13vh - 10.5rem) 0 0;
   }
   .designed {
