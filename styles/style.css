@@ -1,10 +1,10 @@
 :root {
-  --navy: #0a192f;
+  --gray: #1c1e1f;
   --light-blue: #00b8ff;
-  --light-navy: #112240;
+  --black: #15181b;
   --lightest-slate: #ccd6f6;
   --slate: #8892b0;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --gray-shadow: rgba(2, 12, 27, 0.7);
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -30,7 +30,7 @@ a {
   box-sizing: border-box;
 }
 body {
-  background-color: var(--navy);
+  background-color: var(--gray);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,22 +45,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 6%;
-  background-color: rgba(10, 25, 47, 0.85);
-  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+  background-color: #15181b;
+  box-shadow: 0 10px 30px -10px var(--gray-shadow);
 }
 .dot {
-  color: var(--light-blue);
+  color: var(--slate);
 }
 .logo {
   cursor: pointer;
   width: 100px;
-  filter: grayscale(100%);
+  filter: contrast(100%);
   transition: var(--transition);
 }
 .logo:hover {
   cursor: pointer;
   width: 100px;
-  filter: grayscale(0%);
+  filter: contrast(0%);
 }
 
 .header-nav ul {
@@ -84,7 +84,7 @@ ul li a {
   transition: var(--transition);
 }
 ul li:hover a {
-  color: var(--light-blue);
+  color: var(--slate);
 }
 .fa-solid {
   display: none;
@@ -143,22 +143,21 @@ h2 {
   position: relative;
   display: inline-block;
   padding: 15px 50px;
-  color: var(--light-blue);
+  color: var(--lightest-slate);
   overflow: hidden;
   transition: 0.2s;
 }
 .resume:hover {
-  color: var(--navy);
-  background: var(--light-blue);
-  box-shadow: 0 0 10px var(--light-blue), 0 0 40px var(--light-blue),
-    0 0 80px var(--light-blue);
+  color: var(--gray);
+  background: var(--lightest-slate);
+  box-shadow: 0 0 10px var(--lightest-slate), 0 0 40px var(--lightest-slate);
 }
 .text-container {
   width: 750px;
   padding: 50px;
 }
 .card-cont {
-  background-color: var(--light-navy);
+  background-color: #15181b;
   padding: 40px;
   width: 25%;
   height: 570px;
@@ -170,14 +169,10 @@ h2 {
 }
 .card-cont:hover {
   transform: scale(1.04);
-  filter: drop-shadow(0 0 20px var(--light-blue))
-    drop-shadow(0 0 40px var(--light-blue))
-    drop-shadow(0 0 60px var(--light-blue));
+  filter: drop-shadow(0 0 20px var(--lightest-slate))
+    drop-shadow(0 0 40px var(--lightest-slate));
 }
-.card-cont:hover h1 {
-  color: var(--light-blue);
-  text-decoration-color: var(--lightest-slate);
-}
+
 .avatar {
   border-radius: 10px;
   width: 150px;
@@ -186,22 +181,22 @@ h2 {
   position: relative;
   color: var(--lightest-slate);
   text-decoration: underline;
-  text-decoration-color: var(--light-blue);
+  text-decoration-color: var(--lightest-slate);
   text-decoration-thickness: 3px;
   text-underline-offset: 8px;
 }
 .button {
   cursor: pointer;
-  color: var(--light-blue);
-  background-color: var(--light-navy);
-  border: 1px solid var(--light-blue);
+  color: var(--lightest-slate);
+  background-color: var(--black);
+  border: 1px solid var(--slate);
   font-size: var(--fz-lg);
   padding: 0.5em 3em;
   border-radius: 10px;
 }
 .button:hover {
-  color: var(--light-blue);
-  background-color: var(--navy);
+  color: var(--lightest-slate);
+  background-color: var(--gray);
 }
 .hobbies {
   color: var(--slate);
@@ -233,7 +228,7 @@ footer {
   transition: var(--transition);
 }
 .designed:hover {
-  color: var(--light-blue);
+  color: var(--slate);
 }
 @media screen and (max-width: 2260px) {
   .static-container {
@@ -367,7 +362,7 @@ footer {
     background: rgba(0, 0, 0, 0.2);
     display: none;
   }
-  
+
   .static-container {
     flex-direction: column;
     gap: 50px;
