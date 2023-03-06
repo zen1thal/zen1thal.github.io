@@ -213,7 +213,7 @@ footer {
   position: relative;
   text-align: center;
   justify-content: center;
-
+  background: var(--black);
   color: var(--lightest-slate);
   padding: 20px;
   margin-top: auto;
@@ -330,7 +330,7 @@ footer {
   }
 }
 @media screen and (max-width: 700px) {
-  .logo{
+  .logo {
     width: 30%;
   }
   .fa-solid {
