@@ -53,13 +53,12 @@ header {
 }
 .logo {
   cursor: pointer;
-  width: 100px;
+  width: 45%;
   filter: contrast(100%);
   transition: var(--transition);
 }
 .logo:hover {
   cursor: pointer;
-  width: 100px;
   filter: contrast(0%);
 }
 
@@ -331,6 +330,9 @@ footer {
   }
 }
 @media screen and (max-width: 700px) {
+  .logo{
+    width: 30%;
+  }
   .fa-solid {
     display: block;
   }
