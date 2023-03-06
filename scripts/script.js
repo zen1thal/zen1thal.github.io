@@ -10,6 +10,6 @@ function mostrar_menu() {
 }
 
 function ocultar_menu() {
-  nav.style.right = "-400px";
+  nav.style.right = "-60vw";
   background_menu.style.display = "none";
 }

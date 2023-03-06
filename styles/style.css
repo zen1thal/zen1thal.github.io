@@ -38,6 +38,10 @@ body {
 }
 header {
   display: flex;
+  position: fixed;
+  width: 100%;
+  height: 12vh;
+  z-index: 100;
   justify-content: space-between;
   align-items: center;
   padding: 0px 6%;
@@ -88,26 +92,17 @@ ul li:hover a {
   color: #c4c0c0;
   cursor: pointer;
 }
-/* .static-container {
-  position: relative;
-  padding: calc(30vh - 10.5rem) 0 0;
-  margin: 0 15vw;
-  min-height: 50vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "other" "card";
-} */
+
 .static-container {
   display: flex;
   padding: calc(30vh - 10.5rem) 0 0;
-  margin: 0 15vw;
+  margin: 10vh 15vw 0;
   min-height: 50vh;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-#other {
+#text-container {
   width: 50%;
 }
 .welcome {
@@ -158,11 +153,11 @@ h2 {
   box-shadow: 0 0 10px var(--light-blue), 0 0 40px var(--light-blue),
     0 0 80px var(--light-blue);
 }
-.other {
+.text-container {
   width: 750px;
   padding: 50px;
 }
-.card {
+.card-cont {
   background-color: var(--light-navy);
   padding: 40px;
   width: 25%;
@@ -173,13 +168,13 @@ h2 {
   text-align: center;
   line-height: 28px;
 }
-.card:hover {
+.card-cont:hover {
   transform: scale(1.04);
   filter: drop-shadow(0 0 20px var(--light-blue))
     drop-shadow(0 0 40px var(--light-blue))
     drop-shadow(0 0 60px var(--light-blue));
 }
-.card:hover h1 {
+.card-cont:hover h1 {
   color: var(--light-blue);
   text-decoration-color: var(--lightest-slate);
 }
@@ -187,7 +182,7 @@ h2 {
   border-radius: 10px;
   width: 150px;
 }
-.card-name {
+.card-cont-name {
   position: relative;
   color: var(--lightest-slate);
   text-decoration: underline;
@@ -241,6 +236,12 @@ footer {
   color: var(--light-blue);
 }
 @media screen and (max-width: 2260px) {
+  .static-container {
+    flex-direction: row;
+    gap: 100px;
+    margin: 10vh 5vw 0;
+    padding: calc(30vh - 10.5rem) 0 0;
+  }
   .welcome,
   .namesur,
   h2 {
@@ -256,19 +257,12 @@ footer {
   .avatar {
     width: 140px;
   }
-  #card {
-    width: 20%;
+  #card-cont {
+    width: 25%;
     height: 20%;
   }
-  #other {
-    width: 40%;
-  }
-
-  .static-container {
-    flex-direction: row;
-    gap: 100px;
-    margin: 0;
-    padding: calc(30vh - 10.5rem) 0 0;
+  #text-container {
+    width: 50%;
   }
 
   footer {
@@ -276,19 +270,12 @@ footer {
   }
 }
 @media screen and (max-width: 1500px) {
-  #card {
+  #card-cont {
     width: 40%;
     height: 20%;
   }
 }
 @media screen and (max-width: 1100px) {
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-  }
-
   .fa-solid {
     display: block;
   }
@@ -297,10 +284,10 @@ footer {
     position: fixed;
     margin-left: 70%;
     top: 0;
-    right: -400px;
+    right: -60vw;
     backdrop-filter: blur(8.2px);
     -webkit-backdrop-filter: blur(8.2px);
-    width: 400px;
+    width: 60vw;
     height: 100vh;
     padding: 50px;
     text-align: center;
@@ -322,6 +309,12 @@ footer {
     display: none;
   }
 
+  .static-container {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 200px;
+    padding: calc(20vh - 10.5rem) 0 0;
+  }
   .welcome,
   .namesur,
   h2 {
@@ -337,36 +330,23 @@ footer {
   .avatar {
     width: 140px;
   }
-  #card,
-  #other {
+  #card-cont,
+  #text-container {
     width: 70%;
-  }
-
-  .static-container {
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 200px;
-    padding: calc(20vh - 10.5rem) 0 0;
   }
 }
 @media screen and (max-width: 700px) {
   .fa-solid {
     display: block;
   }
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-  }
   .header-nav {
     position: fixed;
     margin-left: 70%;
     top: 0;
-    right: -300px;
+    right: -60vw;
     backdrop-filter: blur(8.2px);
     -webkit-backdrop-filter: blur(8.2px);
-    width: 300px;
+    width: 60vw;
     height: 100vh;
     padding: 50px;
     text-align: center;
@@ -387,6 +367,13 @@ footer {
     background: rgba(0, 0, 0, 0.2);
     display: none;
   }
+  
+  .static-container {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 200px;
+    padding: calc(13vh - 10.5rem) 0 0;
+  }
   .welcome,
   .namesur,
   h2 {
@@ -402,67 +389,12 @@ footer {
   .avatar {
     width: 140px;
   }
-  #card,
-  #other {
+  #card-cont,
+  #text-container {
     width: 80%;
   }
 
-  .static-container {
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 200px;
-    padding: calc(13vh - 10.5rem) 0 0;
-  }
   .designed {
     font-size: var(--fz-md);
   }
 }
-
-/* @media screen and (min-width: 2000px) {
-  .header-nav {
-    display: flex;
-  }
-  .static-container {
-    flex-direction: row;
-    padding: calc(30vh - 10.5rem) 0 0;
-  }
-  #card {
-    width: 20%;
-  }
-  @media screen and (min-width: 1100px) {
-    .header-nav {
-      display: flex;
-    }
-    .static-container {
-      flex-direction: row;
-    }
-    #card {
-      width: 30%;
-    }
-  }
-  @media screen and (min-width: 700px) {
-    #card,
-    #other {
-      width: 50%;
-    }
-  }
-@media only screen and (min-width: 350px) {
-  .header-nav {
-    display: none;
-  }
-  .static-container {
-    flex-direction: column;
-    margin: 0 5vw;
-  }
-  footer {
-    flex-direction: column;
-    gap: 0;
-  }
-  #card,
-  #other {
-    width: 100%;
-  }
-  .static-container {
-    padding: calc(15vh - 10.5rem) 0 0;
-  }
-} */
