@@ -193,16 +193,17 @@ h2 {
 }
 .button {
   cursor: pointer;
-  color: var(--lightest-slate);
-  background-color: var(--black);
+  color: #000;
+  background-color: var(--lightest-slate);
   border: 1px solid var(--slate);
+  transition: var(--transition);
   font-size: var(--fz-lg);
   padding: 0.5em 3em;
   border-radius: 10px;
 }
 .button:hover {
   color: var(--lightest-slate);
-  background-color: var(--gray);
+  background-color: var(--slate);
 }
 .hobbies {
   color: var(--slate);
