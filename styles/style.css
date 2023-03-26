@@ -173,8 +173,12 @@ h2 {
 }
 
 .avatar {
-  border-radius: 10px;
+  border-radius: 100px;
   width: 150px;
+  transition: var(--transition);
+}
+.avatar:hover {
+  transform: scale(1.2);
 }
 .card-cont-name {
   position: relative;
@@ -183,6 +187,9 @@ h2 {
   text-decoration-color: var(--lightest-slate);
   text-decoration-thickness: 3px;
   text-underline-offset: 8px;
+}
+.text-cont {
+  margin-top: 30px;
 }
 .button {
   cursor: pointer;
@@ -199,8 +206,7 @@ h2 {
 }
 .hobbies {
   color: var(--slate);
-  margin-top: 20px;
-  margin-bottom: 25px;
+  padding: 40px 20px;
   font-size: var(--fz-lg);
   font-weight: 510;
 }
