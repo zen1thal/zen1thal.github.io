@@ -23,6 +23,22 @@
 a {
   text-decoration: none;
 }
+.light-mode {
+  background-color: white;
+  color: black;
+}
+.fa-lightbulb {
+  cursor: pointer;
+}
+body,
+h1,
+h2,
+footer,
+header,
+a {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
+}
 * {
   padding: 0;
   margin: 0;
@@ -61,7 +77,10 @@ header {
   cursor: pointer;
   filter: contrast(0%);
 }
-
+.light-mode .logo:hover {
+  cursor: pointer;
+  filter: contrast(70%);
+}
 .header-nav ul {
   position: relative;
   display: flex;
@@ -84,6 +103,9 @@ ul li a {
 }
 ul li:hover a {
   color: var(--slate);
+}
+.light-mode ul li:hover a {
+  color: #fff;
 }
 .fa-solid {
   display: none;
@@ -151,6 +173,13 @@ h2 {
   background: var(--lightest-slate);
   box-shadow: 0 0 10px var(--lightest-slate), 0 0 40px var(--lightest-slate);
 }
+
+.light-mode .resume {
+  color: var(--slate);
+}
+.light-mode .resume:hover {
+  color: #fff;
+}
 .text-container {
   width: 750px;
   padding: 50px;
@@ -205,6 +234,15 @@ h2 {
   color: var(--lightest-slate);
   background-color: var(--slate);
 }
+.light-mode .button {
+  color: var(--slate);
+  background-color: #fff;
+}
+.light-mode .button:hover {
+  color: #fff;
+  background-color: var(--lightest-slate);
+}
+
 .hobbies {
   color: var(--slate);
   padding: 40px 20px;
@@ -235,6 +273,9 @@ footer {
 }
 .designed:hover {
   color: var(--slate);
+}
+.light-mode .designed:hover {
+  color: #fff;
 }
 @media screen and (max-width: 2260px) {
   .static-container {
