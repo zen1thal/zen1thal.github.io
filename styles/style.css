@@ -204,6 +204,7 @@ h2 {
 
 .avatar {
   border-radius: 100px;
+  border: 3px #fff solid;
   width: 150px;
   transition: var(--transition);
 }
