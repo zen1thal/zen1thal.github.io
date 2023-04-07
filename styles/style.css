@@ -105,8 +105,11 @@ ul li a {
 ul li:hover a {
   color: var(--slate);
 }
-.light-mode ul li:hover a {
+.light-mode ul li a {
   color: #fff;
+}
+.light-mode ul li:hover a {
+  color: var(--lightest-slate);
 }
 .fa-solid {
   display: none;
@@ -174,7 +177,9 @@ h2 {
   background: var(--lightest-slate);
   box-shadow: 0 0 10px var(--lightest-slate), 0 0 40px var(--lightest-slate);
 }
-
+.light-mode .card-cont-name{
+  color: #fff;
+}
 .light-mode .resume {
   color: var(--slate);
 }
