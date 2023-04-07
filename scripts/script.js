@@ -36,12 +36,12 @@ function switchMode() {
   } else {
     body.classList.add("light-mode");
     body.style.backgroundColor = "white";
-    body.style.color = "var(--slate)";
-    header1.style.color = "var(--slate)";
-    header2.style.color = "var(--slate)";
+    body.style.color = "var(--light-gray)";
+    header1.style.color = "var(--light-gray)";
+    header2.style.color = "var(--light-gray)";
     hobbies.style.color = "white";
-    footer.style.backgroundColor = "var(--slate)";
-    cardcontent.style.backgroundColor = "var(--slate)";
-    pageHeader.style.backgroundColor = "var(--slate)";
+    footer.style.backgroundColor = "var(--light-gray)";
+    cardcontent.style.backgroundColor = "var(--light-gray)";
+    pageHeader.style.backgroundColor = "var(--light-gray)";
   }
 }
