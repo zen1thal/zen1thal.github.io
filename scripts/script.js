@@ -1,4 +1,4 @@
-document.getElementById("hamburger").addEventListener("click", mostrar_menu);
+document.getElementById("page-header__hamburger").addEventListener("click", mostrar_menu);
 document.getElementById("back_menu").addEventListener("click", ocultar_menu);
 
 nav = document.getElementById("nav");
@@ -20,8 +20,8 @@ function switchMode() {
   const header2 = document.querySelector("h2");
   const footer = document.querySelector(".page-footer");
   const pageHeader = document.querySelector(".page-header");
-  const hobbies = document.querySelector(".hobbies");
-  const cardcontent = document.querySelector(".card-cont");
+  const hobbies = document.querySelector(".card-cont__hobbies");
+  const cardcontent = document.querySelector(".static-container__card-cont");
 
   if (body.classList.contains("light-mode")) {
     body.classList.remove("light-mode");
