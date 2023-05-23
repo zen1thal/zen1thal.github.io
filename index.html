@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="zviatosPortfolio" />
+    <meta name="keywords" content="zviatos, portfolio" />
+    <meta name="author" content="Sviatoslav Syniuk" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>zviatos</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
@@ -41,8 +43,11 @@
             <a class="instagram" href="https://www.instagram.com/zviatos/" target="_blank"><i
                 class="fa-brands fa-instagram"></i></a>
           </li>
-          <li class="page-header__list--lightbulb">
-            <a><i onclick="switchMode()" class="fa fa-thin fa-lightbulb "></i></a>
+          <li class="page-header__list--switch">
+            <label class="switch">
+              <input type="checkbox" onclick="switchMode()" id="modeSwitch">
+              <span class="slider round"></span>
+            </label>
           </li>
         </ul>
       </nav>
