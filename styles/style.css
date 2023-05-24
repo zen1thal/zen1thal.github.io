@@ -20,7 +20,11 @@
   --fz-heading-t: 40px;
   --fz-heading-l: 58px;
 }
-
+.page-header__invisible{
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
 a {
   text-decoration: none;
 }
