@@ -1,7 +1,7 @@
 document
   .getElementById("page-header__hamburger")
   .addEventListener("click", show_menu);
-document.getElementById("back_menu").addEventListener("click", show_menu);
+document.getElementById("back_menu").addEventListener("click", hide_menu);
 
 nav = document.getElementById("nav");
 background_menu = document.getElementById("back_menu");
