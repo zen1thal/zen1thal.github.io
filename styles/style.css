@@ -1,4 +1,5 @@
 :root {
+  --index: calc(1vw + 1vh);
   --gray: #1c1e1f;
   --light-blue: #00b8ff;
   --black: #15181b;
@@ -128,9 +129,12 @@ body {
 }
 .page-header__logo {
   cursor: pointer;
-  width: 30%;
   filter: contrast(100%);
+  width: calc(var(--index) * 3);
   transition: var(--transition);
+}
+.page-header__logo img {
+ 
 }
 .page-header__logo:hover {
   cursor: pointer;
@@ -420,9 +424,7 @@ ul li:hover a {
   }
 }
 @media screen and (max-width: 800px) {
-  .page-header__logo {
-    width: 30%;
-  }
+
   .fa-solid {
     display: block;
   }
