@@ -128,7 +128,7 @@ body {
 }
 .page-header__logo {
   cursor: pointer;
-  width: 35%;
+  width: 30%;
   filter: contrast(100%);
   transition: var(--transition);
 }
@@ -143,7 +143,7 @@ body {
 .page-header__header-nav ul {
   position: relative;
   display: flex;
-  gap: 80px;
+  gap: 50px;
 }
 ul li {
   position: relative;
@@ -387,8 +387,6 @@ ul li:hover a {
 }
 
 @media screen and (max-width: 1200px) {
-
-
   .static-container {
     display: flex;
     padding: 10%;
