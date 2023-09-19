@@ -271,9 +271,11 @@ ul li:hover a {
   border-radius: 100px;
   border: 3px #fff solid;
   width: 150px;
+  filter: grayscale(100%);
   transition: var(--transition);
 }
 .card-cont__avatar:hover {
+  filter: grayscale(0%);
   transform: scale(1.2);
 }
 .card-cont__name {
