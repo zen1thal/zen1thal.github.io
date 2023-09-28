@@ -4,30 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="styles/style.css">
+        <link rel="icon" type="image/png" href="images/z-letter.png">
+        <script defer src="scripts/scroll.js"></script>
         <title>StellarVoyage</title>
     </head>
 
     <body>
-        
+
         <section class="front-page">
 
             <div class="layers">
-                <div class="layer__logo">
+                <div class="layer__logo hidden">
                     <div class="logo-cont">
                         <a class="logo-cont__logo" href="..\..\">
-                            <img src="images/logo.png" class="logo">
+                            <img src="images/logo.png" class="logo" alt="log">
                         </a>
                     </div>
                 </div>
                 <div class="layer__header">
-                    
-                    <div class="text-cont">
-                        <h1>Stellar Voyage</h1>
 
-                        <div class="wrapper">
-                            <a class="cta" href="#">
-                                <span>ABOUT US</span>
+                    <div class="text-cont">
+                        <h1 class="text-cont__title hidden">Stellar Voyage</h1>
+
+                        <div class="wrapper hidden">
+                            <a class="cta" href="#booking">
+                                <span>BOOK NOW</span>
                                 <span>
                                     <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -61,18 +65,246 @@
         </section>
 
 
+        <!-- Cursor -->
+
+        <div class="cursor"></div>
+
+
+        <!-- Video background -->
+
         <section class="hero">
-            <div class="guarantee">
+            <video autoplay loop muted id="background-video">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </section>
+
+
+
+
+        <!-- Planets -->
+
+        <section class="planets">
+            <div class="choice hidden">
+                <h2>Choose your destination wisely</h2>
+            </div>
+
+            <div class="planets-container">
+                <div class="box mars">
+                    <div class="box-header hidden">
+                        <h2>Mars</h2>
+                    </div>
+
+                    <div id="draggable-elem" class="box-content hidden">
+                        <img src="images/mars.png" alt="image of planet mars">
+                    </div>
+
+                </div>
+                <div class="box enceladus">
+                    <div class="box-header hidden">
+                        <h2>Enceladus</h2>
+                    </div>
+
+                    <div id="draggable-elem2" class="box-content hidden">
+                        <img src="images/enceladus.webp" alt="image of planet enceladus">
+                    </div>
+
+                </div>
+                <div class="box kepler">
+                    <div class="box-header hidden">
+                        <h2>Kepler</h2>
+                    </div>
+
+                    <div id="draggable-elem3" class="box-content box-content_kepler hidden">
+                        <img src="images/kepler.png" alt="image of planet kepler">
+                    </div>
+
+                </div>
+                <div class="box proxima">
+                    <div class="box-header hidden">
+                        <h2>Proxima</h2>
+                    </div>
+
+                    <div id="draggable-elem4" class="box-content box-content__proxima hidden">
+                        <img src="images/proxima.png" alt="image of planet proxima">
+                    </div>
+
+                </div>
+                <div class="box gliese">
+                    <div class="box-header hidden">
+                        <h2>Gliese</h2>
+                    </div>
+
+                    <div id="draggable-elem5" class="box-content box-content__gliese hidden">
+                        <img src="images/gliese.png" alt="image of planet gliese">
+                    </div>
+
+                </div>
+                <div class="box europa">
+                    <div class="box-header hidden">
+                        <h2>Europa</h2>
+                    </div>
+
+                    <div id="draggable-elem6" class="box-content hidden">
+                        <img src="images/europa.webp" alt="image of planet europa">
+                    </div>
+
+                </div>
 
             </div>
-            <h1>IN PROGRESS</h1>
-            <p>Explore the wonders of space and experience the thrill of space travel.</p>
-            <a href="#" class="btn">Book Your Journey</a>
-        </section>
-
-        <section class="gallery-page">
 
         </section>
+
+
+        <!-- Testimonial -->
+
+        <section class="testimonial-container ">
+            <h1 class=" hidden">What Our Clients Say</h1>
+            <div class="testimonial-slides">
+
+                <div class="testimonial-slide hidden">
+                    <h2>Maria H.</h2>
+                    <p><i class="fa fa-solid fa-quote-left"></i> StellarVoyage made my dream of exploring the world
+                        while
+                        minimizing my carbon footprint a reality.
+                        From
+                        the lush rainforests of Costa Rica to the mesmerizing deserts of Namibia, every journey was an
+                        eco-friendly adventure. <i class="fa fa-solid fa-quote-right"></i>
+                    </p>
+                </div>
+                <div class="testimonial-slide hidden">
+                    <h2>John T.</h2>
+                    <p><i class="fa fa-solid fa-quote-left"></i> I was skeptical about solar-powered travel at first,
+                        but StellarVoyage changed my perspective
+                        entirely.
+                        Their solar-powered vehicles not only saved me money on fuel but also allowed me to venture off
+                        the
+                        beaten path. <i class="fa fa-solid fa-quote-right"></i></p>
+                </div>
+                <div class="testimonial-slide hidden">
+                    <h2>Emily S.</h2>
+                    <p><i class="fa fa-solid fa-quote-left"></i> As a passionate advocate for responsible tourism, I
+                        couldn't be more impressed with StellarVoyage.
+                        Their commitment to sustainability and the pristine locations they offer left me in awe. <i
+                            class="fa fa-solid fa-quote-right"></i></p>
+                </div>
+                <div class="testimonial-slide hidden">
+                    <h2>Alex M.</h2>
+                    <p><i class="fa fa-solid fa-quote-left"></i> Being a digital nomad, I'm always on the lookout for
+                        eco-friendly travel options. StellarVoyage not
+                        only met but exceeded my expectations. <i class="fa fa-solid fa-quote-right"></i></p>
+                </div>
+                <div class="testimonial-slide hidden">
+                    <h2>David W.</h2>
+                    <p><i class="fa fa-solid fa-quote-left"></i> I had a bucket list of destinations, and StellarVoyage
+                        helped me check off each one with a green
+                        twist.
+                        The seamless booking process, friendly staff, and the thrill of traveling sustainably have made
+                        my
+                        journeys unforgettable. <i class="fa fa-solid fa-quote-right"></i></p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Ticker Loop -->
+
+        <section class="ticker">
+            <div class="ticker-marquee invert ">
+                <h2 class="ben">
+
+                    Travel Along With Us / Travel Along With Us / Travel Along With Us / Travel Along With Us /
+                </h2>
+                <h2 class="ben">
+
+                    Travel Along With Us / Travel Along With Us / Travel Along With Us / Travel Along With Us /
+                </h2>
+            </div>
+        </section>
+
+
+
+        <!-- Booking -->
+
+        <section class="booking-pricing hidden" id="booking">
+            <div class="booking-box">
+                <div class="booking-form">
+                    <h2>Book Your StellarVoyage Adventure</h2>
+                    <form>
+                        <label for="destination">Select Destination:</label>
+                        <select id="destination" name="destination">
+                            <option value="mars">Mars</option>
+                            <option value="enceladus">Enceladus</option>
+                            <option value="europa">Europa (Jupiter's Moon)</option>
+                            <option value="kepler">Kepler-442b</option>
+                            <option value="proxima">Proxima Centauri b</option>
+                            <option value="gliese">Gliese 581g</option>
+                        </select>
+
+                        <label for="departure-date">Departure Date:</label>
+                        <input type="date" id="departure-date" name="departure-date" required>
+
+                        <label for="travelers">Number of Travelers:</label>
+                        <input type="number" id="travelers" name="travelers" min="1" required>
+
+                        <button class="booking-btn" type="submit">Book Now</button>
+                    </form>
+                </div>
+
+                <div class="pricing-details">
+                    <h2>Pricing Information</h2>
+                    <p>Prices for our StellarVoyage adventures start at $X per person.</p>
+                    <p>Please note that prices may vary depending on your chosen destination and travel dates.</p>
+                    <p>Feel free to contact us for custom packages and special offers.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- Update -->
+
+        <section class="updates hidden">
+            <div class="update-box">
+                <div class="uptodate">
+                    <h2>Stay up to date</h2>
+                </div>
+                <div class="subscription">
+                    <form
+                        style="width: 100%; height: auto; display: flex; position: relative; flex-direction: row; color:  rgb(255, 255, 255)"
+                        method="POST">
+                        <input type="email" name="email" placeholder="Your account email" autocomplete="off"
+                            autocapitalize="none" autocorrect="off" spellcheck="false"
+                            style="appearance: none; width: 100%; height: auto; outline: none; border: medium; padding: 14px 108px 14px 12px; border-radius: 8px; font-size: 14px; "
+                            value="">
+
+                        <div style="position: absolute; top: 5px; right: 5px; bottom: 5px;">
+
+                            <input type="submit"
+                                style="appearance: none; width: 96px; height: 100%; outline: none; border: medium; cursor: pointer; padding: 0px 15px; border-radius: 3px; font-weight: 500; font-size: 14px; font-family: Inter, sans-serif; font-style: normal; letter-spacing: 0em; line-height: 20px; text-align: center; background: rgb(27, 30, 37); color: rgb(255, 255, 255)"
+                                value="Subscribe">
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+
+        <footer class="page-footer">
+            <p class="page-footer__designed">
+                <span class="copy">©</span> 2023 Zviatos Inc. All rights reserved
+            </p>
+        </footer>
+
+
+        <!-- Script -->
 
         <script src="scripts/script.js"></script>
     </body>
