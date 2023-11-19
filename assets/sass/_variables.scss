@@ -1,0 +1,32 @@
+$index: calc(1vw + 1vh);
+$gray: #1c1e1f;
+$light-blue: #00b8ff;
+$black: #15181b;
+$lightest-slate: #ccd6f6;
+$slate: #8892b0;
+$light-gray: #929292;
+$gray-shadow: rgba(2, 12, 27, 0.7);
+
+$theme-colors: (
+  "gray": #1c1e1f,
+  "lightBlue": #00b8ff,
+  "black": #15181b,
+  "lightestSlate": #ccd6f6,
+  "slate": #8892b0,
+  "lightGray": #929292,
+  "grayShadow": rgba(2, 12, 27, 0.7),
+);
+
+$font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+  system-ui, sans-serif;
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+$fz-xxs: 12px;
+$fz-xs: 13px;
+$fz-sm: 14px;
+$fz-md: 16px;
+$fz-lg: 18px;
+$fz-xl: 20px;
+$fz-xxl: 22px;
+$fz-heading: 32px;
+$fz-heading-t: 40px;
+$fz-heading-l: 58px;
