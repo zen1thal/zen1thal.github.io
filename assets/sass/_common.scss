@@ -12,8 +12,8 @@ html {
   overflow-x: hidden;
 }
 body {
+  font-family: sans-serif;
   background-color: $gray;
-  font-family: $font-sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,10 +21,13 @@ a {
   text-decoration: none;
 }
 
-.light-mode {
-  background-color: white;
-  color: black;
+.container{
+	width: calc(100% - 40px);
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
 }
+
 .page-header__invisible {
   position: absolute;
   left: -9999px;
@@ -99,6 +102,9 @@ input:checked + .slider:before {
   background-color: #15181b;
   box-shadow: 0 10px 30px -10px $gray-shadow;
   top: 0;
+  &.light-mode{
+    background-color: #929292;
+  }
 }
 .dot {
   color: $slate;
@@ -136,12 +142,15 @@ ul li a {
   font-weight: 650;
   margin: 0 5px;
   transition: $transition;
+  &.light-mode {
+    color: #fff;
+  }
+
 }
 ul li:hover a {
   color: $slate;
 }
 .light-mode ul li a {
-  color: #fff;
 }
 .light-mode ul li:hover a {
   color: $lightest-slate;

@@ -5,6 +5,7 @@ section.home {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-width: initial;
   }
   .text-container {
     width: 50%;
@@ -59,7 +60,7 @@ section.home {
       }
     }
     &.light-mode {
-      color: $slate;
+      color: $light-gray;
     }
   }
 
