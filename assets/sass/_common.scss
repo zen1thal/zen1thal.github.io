@@ -1,38 +1,101 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
-  list-style: none;
   box-sizing: border-box;
   vertical-align: baseline;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
-    border-color 0.5s ease-in-out;
+  transition: $transition;
+}
+img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+a {
+  display: block;
+  text-decoration: none;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+p a,
+label a,
+li a {
+  display: inline;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: 700;
+}
+li {
+  list-style-type: none;
+  font-family: inherit;
+  color: inherit;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+label {
+  display: block;
+}
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+fieldset legend {
+  margin-bottom: 10px;
+}
+.clear {
+  clear: both;
+}
+.slider *::selection {
+  background: transparent;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
 }
 html {
-  overflow-x: hidden;
+  height: 100%;
 }
 body {
   font-family: sans-serif;
-  background-color: $gray;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: $gray;
+  min-height: 100%;
+  height: 100%;
 }
-a {
-  text-decoration: none;
-}
-
-.container{
-	width: calc(100% - 40px);
-	max-width: 1200px;
-	margin: 0 auto;
-	position: relative;
+.container {
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.page-header__invisible {
-  position: absolute;
-  left: -9999px;
-  visibility: hidden;
-}
 .switch {
   position: relative;
   display: inline-block;
@@ -90,74 +153,91 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.page-header {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  height: 12vh;
-  z-index: 100;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 6%;
-  background-color: #15181b;
-  box-shadow: 0 10px 30px -10px $gray-shadow;
-  top: 0;
-  &.light-mode{
-    background-color: #929292;
-  }
-}
 .dot {
   color: $slate;
 }
-.page-header__logo {
-  cursor: pointer;
-  filter: contrast(100%);
-  width: 100px;
-  transition: $transition;
-}
-.page-header__logo:hover {
-  cursor: pointer;
-  filter: contrast(0%);
-}
-.light-mode .page-header__logo:hover {
-  cursor: pointer;
-  filter: contrast(70%);
-}
-.page-header__header-nav ul {
-  position: relative;
-  display: flex;
-  gap: 50px;
-}
-ul li {
-  position: relative;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-  transition: $transition;
-}
-ul li a {
-  position: relative;
-  color: $lightest-slate;
-  font-size: 2em;
-  font-weight: 650;
-  margin: 0 5px;
-  transition: $transition;
-  &.light-mode {
-    color: #fff;
-  }
 
-}
-ul li:hover a {
-  color: $slate;
-}
-.light-mode ul li a {
-}
-.light-mode ul li:hover a {
-  color: $lightest-slate;
-}
 .fa-solid {
   display: none;
   font-size: 3em;
   color: #c4c0c0;
   cursor: pointer;
+}
+.light-mode {
+  background: $white !important;
+  .dot{
+    color: $white !important;
+  }
+  .page-header {
+    background-color: #929292 !important;
+    &__logo{
+      &:hover{
+        filter: contrast(70%);
+      }
+    }
+    a{
+      color: $white !important;
+      &:hover{
+        color: $lightest-slate !important;
+      }
+    }
+  }
+  .main-container {
+    background: $white !important;
+    .text-container{
+      h1,h2{
+        color: $light-gray !important;
+      }
+    }
+    .content-resume {
+      color: $light-gray !important;
+      &:hover {
+        color: $white !important;
+      }
+    }
+    .content-card {
+      background: $light-gray !important;
+      &__name {
+        color: $white !important;
+      }
+      p {
+        color: $white !important;
+      }
+      &__button {
+        color: $slate !important;
+        background-color: #fff !important;
+        &:hover {
+          color: #fff !important;
+          background-color: $lightest-slate !important;
+        }
+      }
+    }
+  }
+
+  .page-footer {
+    background: $light-gray !important;
+    &__designed {
+      color: #fff !important;
+
+      &:hover {
+        color: $lightest-slate !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-medium) {
+  .fa-solid {
+    display: block;
+    font-size: 35px;
+  }
+  #back_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
 }

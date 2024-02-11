@@ -16,39 +16,11 @@ function hide_menu() {
   background_menu.style.display = "none";
 }
 function switchMode() {
-  const view = document.querySelector(".view");
-  const header1 = document.querySelector("h1");
-  const header2 = document.querySelector("h2");
-  const headerLinks = document.querySelector("ul li a");
-  const resume = document.querySelector(".resume");
-  const footer = document.querySelector(".page-footer");
-  const pageHeader = document.querySelector(".page-header");
-  const hobbies = document.querySelector(".card-cont__hobbies");
-  const cardContent = document.querySelector(".card-cont");
+  const body = document.getElementById("body-modes");
 
-  if (view.classList.contains("light-mode")) {
-    view.classList.remove("light-mode");
-    view.style.backgroundColor = "#1c1e1f";
-    headerLinks.classList.remove("light-mode");
-    view.style.color = "white";
-    header1.style.color = "white";
-    header2.style.color = "white";
-    hobbies.style.color = "--slate";
-    resume.classList.remove("light-mode");
-    footer.style.backgroundColor = "#15181b";
-    cardContent.style.backgroundColor = "#15181b";
-    pageHeader.style.backgroundColor = "#15181b";
+  if (body.classList.contains("light-mode")) {
+    body.classList.remove("light-mode");
   } else {
-    view.classList.add("light-mode");
-    view.style.backgroundColor = "white";
-    view.style.color = "#ccd6f6";
-    headerLinks.classList.remove("light-mode");
-    header1.style.color = "#929292";
-    header2.style.color = "#929292";
-    hobbies.style.color = "white";
-    resume.classList.add("light-mode");
-    footer.style.backgroundColor = "#929292";
-    cardContent.style.backgroundColor = "#929292";  
-    pageHeader.style.backgroundColor = "#929292";
+    body.classList.add("light-mode");
   }
 }

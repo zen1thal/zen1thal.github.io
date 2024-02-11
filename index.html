@@ -24,15 +24,13 @@
     </script>
   </head>
 
-  <body>
+  <body id="body-modes">
 
     <header class="home page-header">
 
-      <div class="page-header__logo-container">
-        <a href="/">
-          <img class="page-header__logo" src="assets/img/logo.png" alt="logo">
-        </a>
-      </div>
+      <a href="/" class="page-header__logo">
+        <img src="assets/img/logo.png" alt="logo">
+      </a>
 
       <i id="page-header__hamburger" class="fa-solid fa-bars page-header__hamburger"></i>
       <div id="back_menu"></div>
@@ -72,47 +70,48 @@
         </ul>
       </nav>
     </header>
-
-    <section class="home view">
-      <div class="container">
-        <div class="text-container">
-          <h1 class="welcome">Hello there!</h1>
-
-          <div class="me">
+    <main>
+      <section class="home main-container">
+        <div class="container">
+          <div class="text-container">
+            <h1>Hello there!</h1>
             <h2>
               I am
-              <span class="fullName">Sviatoslav Syniuk</span>
+              <span>Sviatoslav Syniuk</span>
               .
             </h2>
+
+            <div class="content-job">
+              <p>Full-Stack Developer</p>
+            </div>
+
+            <a class="content-resume" href="/assets/docs/zviatosCV.pdf" download>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Resume
+              <i class="fa fa-duotone fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
 
-          <div class="job">Full-Stack Developer</div>
-
-          <a class="resume" href="/assets/docs/zviatosCV.pdf" download>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Resume
-            <i class="fa fa-duotone fa-arrow-up-right-from-square"></i>
-          </a>
+          <div class="content-card" style="--clr:#575d90;">
+            <div class="content-card__photo">
+              <img src="assets/img/avatar.jpg" alt="">
+            </div>
+            <div class="content-card__text-cont">
+              <h1 class="content-card__name">About Me</h1>
+              <p class="content-card__hobbies">Full Stack Developer with a passion for coding and a dedication to
+                staying fit. Enthusiastic about future technologies like AI, and a music lover at heart. Let's build a
+                tech-driven future together.</p>
+              <a href="mailto:zviatosuu@gmail.com" class="content-card__button">Contact</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card-cont" style="--clr:#575d90;">
-          <div class="card-cont__photo-cont">
-            <img src="assets/img/avatar.jpg" alt="" class="card-cont__avatar">
-          </div>
-          <div class="card-cont__text-cont">
-            <h1 class="card-cont__name">About Me</h1>
-            <p class="card-cont__hobbies">Full Stack Developer with a passion for coding and a dedication to
-              staying fit. Enthusiastic about future technologies like AI, and a music lover at heart. Let's build a
-              tech-driven future together.</p>
-            <a href="mailto:zviatosuu@gmail.com" class="card-cont__button">Contact</a>
-          </div>
-        </div>
-      </div>
+      </section>
+    </main>
 
-    </section>
     <footer class="page-footer">
       <a href="https://github.com/zviatos/zviatos.github.io" class="page-footer__designed" target="_blank">
         Copyright © 2023 by zviatos. All rights reserved
