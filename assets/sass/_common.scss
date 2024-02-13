@@ -185,17 +185,22 @@ input:checked + .slider:before {
   .main-container {
     background: $white !important;
     .left-side {
-      h1,
-      h2 {
-        color: $light-gray !important;
+      &__text {
+        h1,
+        h2 {
+          color: $light-gray !important;
+        }
+      }
+      &__button {
+        a {
+          color: $light-gray !important;
+          &:hover {
+            color: $white !important;
+          }
+        }
       }
     }
-    .content-resume {
-      color: $light-gray !important;
-      &:hover {
-        color: $white !important;
-      }
-    }
+
     .right-side {
       background: $light-gray !important;
       &__photo {
@@ -203,18 +208,20 @@ input:checked + .slider:before {
           filter: none !important;
         }
       }
-      &__name {
-        color: $white !important;
-      }
-      p {
-        color: $white !important;
-      }
-      &__button {
-        color: $slate !important;
-        background-color: #fff !important;
-        &:hover {
-          color: #fff !important;
-          background-color: $lightest-slate !important;
+      &__text {
+        h2 {
+          color: $white !important;
+        }
+        p {
+          color: $white !important;
+        }
+        a {
+          color: $slate !important;
+          background-color: #fff !important;
+          &:hover {
+            color: #fff !important;
+            background-color: $lightest-slate !important;
+          }
         }
       }
     }
