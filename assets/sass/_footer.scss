@@ -1,5 +1,5 @@
 .page-footer {
-  @include flex(row,nowrap,center,center);
+  @include flex(row, nowrap, center, center);
   position: absolute;
   width: 100%;
   height: 56px;
@@ -9,12 +9,15 @@
   color: $lightest-slate;
   padding: 20px;
   font-weight: 500;
-  @media screen and (max-width:$break-large){
+  @media screen and (max-width: $break-large) {
     position: relative;
   }
   a {
     color: $lightest-slate;
     font-size: $fz-md;
+    @media screen and (max-width: $break-large) {
+      font-size: $fz-xxs;
+    }
     line-height: 1;
     transition: $transition;
     &:hover {

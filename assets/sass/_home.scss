@@ -5,7 +5,7 @@ section.main-container {
     padding: 100px 0;
   }
   .container {
-    @include flex(row,wrap,center,center);
+    @include flex(row, wrap, center, center);
     @media screen and (max-width: $break-large) {
       flex-direction: column;
     }
@@ -14,7 +14,7 @@ section.main-container {
       width: 85%;
     }
   }
-  .text-container {
+  .left-side {
     width: 70%;
     @media screen and (max-width: $break-medium) {
       width: 85%;
@@ -73,31 +73,40 @@ section.main-container {
         }
       }
     }
-    .content-resume {
+    .content-button {
+      @media screen and (max-width: $break-small) {
+        @include flex(row, nowrap, center, center);
+      }
       margin: 50px 0 0 0;
-      font-size: 30px;
-      font-weight: 600;
-      position: relative;
-      display: inline-block;
-      padding: 15px 50px;
-      color: $lightest-slate;
-      overflow: hidden;
-      transition: 0.2s;
-      @media screen and (max-width: $break-large) {
-        font-size: $fz-heading;
-      }
-      @media screen and (max-width: $break-medium) {
-        font-size: $fz-xxl;
-      }
-      &:hover {
-        color: $gray;
-        background: $lightest-slate;
-        box-shadow: 0 0 10px $lightest-slate, 0 0 40px $lightest-slate;
+
+      a {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 600;
+        position: relative;
+        padding: 15px 50px;
+        color: $lightest-slate;
+        overflow: hidden;
+        transition: 0.2s;
+        @media screen and (max-width: $break-large) {
+          font-size: $fz-heading;
+        }
+        @media screen and (max-width: $break-medium) {
+          font-size: $fz-xxl;
+        }
+        @media screen and (max-width: $break-small) {
+          font-size: $fz-xl;
+        }
+        &:hover {
+          color: $gray;
+          background: $lightest-slate;
+          box-shadow: 0 0 10px $lightest-slate, 0 0 40px $lightest-slate;
+        }
       }
     }
   }
 
-  .content-card {
+  .right-side {
     background-color: #15181b;
     padding: 40px;
     width: 30%;
@@ -162,7 +171,8 @@ section.main-container {
         color: $slate;
         margin: 40px 0;
         font-size: $fz-lg;
-        font-weight: 510;
+        font-weight: 400;
+        line-height: 150%;
         @media screen and (max-width: $break-large) {
           font-size: $fz-md;
         }
