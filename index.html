@@ -13,12 +13,7 @@
     <link rel="icon" type="image/png" href="assets/img/z-letter.png">
     <title>zviatos</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
-      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S9LXMCEJV"></script>
     <script>
@@ -30,7 +25,7 @@
     </script>
   </head>
 
-  <body id="body-modes">
+  <body>
 
     <header class="page-header">
 
@@ -38,7 +33,7 @@
         <img src="assets/img/logo.png" alt="logo">
       </a>
 
-      <i id="page-header__hamburger" class="fa-solid fa-bars page-header__hamburger"></i>
+      <i id="page-header__hamburger" class="fa-solid fa-bars"></i>
       <div id="back_menu"></div>
 
       <nav class="page-header__header-nav" id="nav">
@@ -68,7 +63,7 @@
           </li>
           <li class="page-header__list--switch">
             <label class="switch">
-              <input type="checkbox" onclick="switchMode()" id="modeSwitch">
+              <input type="checkbox" class="modeSwitch">
               <span class="slider round"></span>
               <span class="page-header__invisible">Change Mode</span>
             </label>

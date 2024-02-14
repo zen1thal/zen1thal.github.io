@@ -1,26 +1,19 @@
-document
-  .getElementById("page-header__hamburger")
-  .addEventListener("click", show_menu);
-document.getElementById("back_menu").addEventListener("click", hide_menu);
+$(document).ready(function () {
+  $("#page-header__hamburger").click(function () {
+    $("nav").css("right", "0");
+    $("#back_menu").css("display", "block");
+  });
 
-nav = document.getElementById("nav");
-background_menu = document.getElementById("back_menu");
+  $("#back_menu").click(function () {
+    $("nav").css("right", "-60vw");
+    $("#back_menu").css("display", "none");
+  });
 
-function show_menu() {
-  nav.style.right = "0px";
-  background_menu.style.display = "block";
-}
-
-function hide_menu() {
-  nav.style.right = "-60vw";
-  background_menu.style.display = "none";
-}
-function switchMode() {
-  const body = document.getElementById("body-modes");
-
-  if (body.classList.contains("light-mode")) {
-    body.classList.remove("light-mode");
-  } else {
-    body.classList.add("light-mode");
-  }
-}
+  $(".slider").click(function () {
+    if ($("body").hasClass("light-mode")) {
+      $("body").removeClass("light-mode");
+    } else {
+      $("body").addClass("light-mode");
+    }
+  });
+});
