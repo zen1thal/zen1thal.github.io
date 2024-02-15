@@ -13,7 +13,6 @@
     filter: contrast(100%);
     transition: $transition;
     width: 90px;
-    height: 100%;
     @media screen and (max-width: $break-large) {
       width: 80px;
     }
