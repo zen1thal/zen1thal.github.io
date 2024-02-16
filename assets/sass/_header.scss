@@ -13,15 +13,13 @@
     filter: contrast(100%);
     transition: $transition;
     width: 90px;
-    @media screen and (max-width: $break-large) {
+    @media screen and (max-width: $break-medium) {
       width: 80px;
     }
-    @media screen and (max-width: $break-medium) {
+    @media screen and (max-width: $break-small) {
       width: 60px;
     }
-    @media screen and (max-width: $break-small) {
-      width: 50px;
-    }
+
     img {
       object-fit: contain;
       width: 100%;
