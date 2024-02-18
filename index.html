@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-white.png">
     <title>zviatos</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/animations.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S9LXMCEJV"></script>
@@ -26,64 +27,74 @@
   </head>
 
   <body>
+    <div class="cs">
+      <img src="assets/img/cursor.png" alt="">
+      <img src="assets/img/cursor-hover.png" alt="">
+    </div>
+    <header class="page-header animatedParent animateOnce" id="header">
+      <div class="container">
+        <div class="content-logo animated fadeInDownShort delay-1000">
+          <a href="/" class="page-header__logo">
+            <img src="assets/img/logo.png" alt="logo">
+          </a>
+        </div>
 
-    <header class="page-header">
+        <div class="content-nav">
+          <i id="page-header__hamburger" class="fa-solid fa-bars animated fadeInDownShort delay-1000"></i>
+          <div id="back_menu"></div>
 
-      <a href="/" class="page-header__logo">
-        <img src="assets/img/logo.png" alt="logo">
-      </a>
+          <nav class="page-header__header-nav animated fadeInDownShort delay-1000" id="nav">
+            <ul class="page-header__list">
+              <li class="page-header__list--email">
+                <a id="email" href="mailto:sviatoslav.syniuk2003@gmail.com">
+                  <span class="dot">.</span>contact
+                </a>
+              </li>
+              <li class="page-header__list--github">
+                <a class="github" href="https://github.com/zviatos" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                  <span class="page-header__invisible">Visit Github</span>
+                </a>
+              </li>
+              <li class="page-header__list--linkedin">
+                <a class="linkedin" href="https://www.linkedin.com/in/sviatoslav-syniuk/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span class="page-header__invisible">Visit LinkedIn</span>
+                </a>
+              </li>
+              <li class="page-header__list--instagram">
+                <a class="instagram" href="https://www.instagram.com/zviatos/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span class="page-header__invisible">Visit Instagram</span>
+                </a>
+              </li>
+              <li class="page-header__list--switch">
+                <label class="switch">
+                  <input type="checkbox" class="modeSwitch">
+                  <span class="slider round"></span>
+                  <span class="page-header__invisible">Change Mode</span>
+                </label>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-      <i id="page-header__hamburger" class="fa-solid fa-bars"></i>
-      <div id="back_menu"></div>
+      </div>
 
-      <nav class="page-header__header-nav" id="nav">
-        <ul class="page-header__list">
-          <li class="page-header__list--email">
-            <a id="email" href="mailto:sviatoslav.syniuk2003@gmail.com">
-              <span class="dot">.</span>contact
-            </a>
-          </li>
-          <li class="page-header__list--github">
-            <a class="github" href="https://github.com/zviatos" target="_blank">
-              <i class="fa-brands fa-github"></i>
-              <span class="page-header__invisible">Visit Github</span>
-            </a>
-          </li>
-          <li class="page-header__list--linkedin">
-            <a class="linkedin" href="https://www.linkedin.com/in/sviatoslav-syniuk/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-              <span class="page-header__invisible">Visit LinkedIn</span>
-            </a>
-          </li>
-          <li class="page-header__list--instagram">
-            <a class="instagram" href="https://www.instagram.com/zviatos/" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-              <span class="page-header__invisible">Visit Instagram</span>
-            </a>
-          </li>
-          <li class="page-header__list--switch">
-            <label class="switch">
-              <input type="checkbox" class="modeSwitch">
-              <span class="slider round"></span>
-              <span class="page-header__invisible">Change Mode</span>
-            </label>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main>
-      <section class="home main-container">
+      <section class="home main-container animatedParent animateOnce" id="main">
         <div class="container">
           <div class="left-side">
             <div class="left-side__text">
-              <h1>Hello there!</h1>
-              <h2>I am <span>Sviatoslav Syniuk</span>.</h2>
-              <div class="left-side__job">
+              <h1 class="animated fadeInUpShort">Hello there!</h1>
+              <h2 class="animated fadeInUpShort delay-500">I am <span>Sviatoslav Syniuk</span>.</h2>
+              <div class="left-side__job animated fadeInUpShort delay-500">
                 <p>Full-Stack Developer</p>
               </div>
             </div>
 
-            <div class="left-side__button">
+            <div class="left-side__button animated fadeInUpShort delay-750">
               <a href="/assets/docs/zviatosCV-nodata.pdf" download>
                 <span></span>
                 <span></span>
@@ -95,7 +106,7 @@
             </div>
           </div>
 
-          <div class="right-side" style="--clr:#575d90;">
+          <div class="right-side animated fadeInUpShort delay-750" style="--clr:#575d90;">
             <div class="right-side__photo">
               <img src="assets/img/avatar.jpg" alt="profileImage">
             </div>
@@ -112,15 +123,67 @@
       </section>
 
       <!-- TODO: Projects section -->
+      <section class="home projects" id="projects">
+        <div class="container">
+          <h2>My projects</h2>
+          <div class="project animatedParent">
+            <div class="content-text animated fadeInLeft">
+              <a href="https://aestes.es">
+                <h3>Dental Clinic</h3>
+                <p>aestes.es</p>
+              </a>
+            </div>
+            <div class="content-img">
+            </div>
+          </div>
+          <div class="project animatedParent">
+            <div class="content-text animated fadeInRight">
+              <a href="https://lab.bluecell.es">
+                <h3>Avatar Chatbot</h3>
+                <p>lab.bluecell.es</p>
+              </a>
+            </div>
+            <div class="content-img">
+            </div>
+          </div>
+          <div class="project animatedParent">
+            <div class="content-text animated fadeInLeft">
+              <a href="#header">
+                <h3>Sign language recognizer</h3>
+                <p>in development</p>
+              </a>
+            </div>
+            <div class="content-img">
+            </div>
+          </div>
+          <div class="project animatedParent">
+            <div class="content-text animated fadeInRight">
+              <a href="#header">
+                <h3>AI-driven Music Composition Platform</h3>
+                <p>coming soon</p>
+              </a>
+            </div>
+            <div class="content-img">
 
+            </div>
+          </div>
+
+
+
+        </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="page-footer">
-      <a href="https://github.com/zviatos/zviatos.github.io" class="page-footer__designed" target="_blank">
+    <footer class="page-footer animatedParent animateOnce">
+      <a href="https://github.com/zviatos/zviatos.github.io" class="page-footer__designed animated fadeInUpShort"
+        target="_blank">
         Copyright © 2023 by zviatos. All rights reserved
       </a>
     </footer>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/css3-animate-it.js"></script>
+
   </body>
 
 </html>

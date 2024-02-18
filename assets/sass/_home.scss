@@ -1,12 +1,15 @@
 section.main-container {
   background: $gray;
   padding: 50px 0;
+  @media screen and (max-width: $break-extralarge) {
+    height: initial;
+  }
   @media screen and (max-width: $break-large) {
     padding: 100px 0;
   }
   .container {
-    @include flex(row, wrap, center, center);
-    @media screen and (max-width: $break-large) {
+    @include flex(row, nowrap, center, center);
+    @media screen and (max-width: $break-extralarge) {
       flex-direction: column;
     }
     @media screen and (max-width: $break-small) {
@@ -39,6 +42,7 @@ section.main-container {
           font-size: $fz-heading-t;
         }
         span {
+          letter-spacing: 2px;
           font-size: 70px;
           font-weight: 700;
           color: transparent;
@@ -119,6 +123,11 @@ section.main-container {
     border-radius: 10px;
     text-align: center;
     line-height: 28px;
+    @media screen and (max-width: $break-extralarge) {
+      margin-top: 50px;
+      min-height: initial;
+      width: 60%;
+    }
     @media screen and (max-width: $break-large) {
       margin-top: 50px;
       min-height: initial;
@@ -185,7 +194,6 @@ section.main-container {
         }
       }
       a {
-        cursor: pointer;
         color: #000;
         background-color: $lightest-slate;
         border: 1px solid $slate;
@@ -203,3 +211,72 @@ section.main-container {
   }
 }
 // TODO: Extra-large design
+section.projects {
+  padding-top: 700px;
+  @media screen and (max-width: $break-extralarge) {
+    padding-top: 100px;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: $fz-heading-l;
+    font-weight: 500;
+    color: $slate;
+    @media screen and (max-width: $break-large) {
+      text-align: center;
+    }
+    @media screen and (max-width: $break-medium) {
+      font-size: $fz-heading-t;
+    }
+    @media screen and (max-width: $break-small) {
+      font-size: $fz-heading;
+    }
+  }
+  .project {
+    @include flex(row, nowrap, space-between, center);
+    @media screen and (max-width: $break-large) {
+      flex-direction: column;
+    }
+    overflow: hidden;
+    margin-top: 200px;
+    width: 100%;
+    color: $lightest-slate;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+      @media screen and (max-width: $break-large) {
+        flex-direction: column;
+      }
+    }
+    .content-text {
+      width: 50%;
+      text-align: center;
+      text-transform: uppercase;
+      @media screen and (max-width: $break-large  ) {
+        width: 100%;
+      }
+    }
+    .content-img {
+      @include flex(row, nowrap, center, center);
+      width: 50%;
+      min-height: 500px;
+      border-radius: 30px;
+      @media screen and (max-width: $break-large) {
+        min-height: 100px;
+      }
+    }
+    h3 {
+      color: $lightest-slate;
+      font-size: $fz-heading;
+      letter-spacing: 4px;
+      @media screen and (max-width: $break-small) {
+        font-size: $fz-xxl;
+      }
+    }
+    p {
+      margin-top: 10px;
+      color: $yellow;
+      font-size: $fz-xs;
+      font-weight: 500;
+      letter-spacing: 4px;
+    }
+  }
+}

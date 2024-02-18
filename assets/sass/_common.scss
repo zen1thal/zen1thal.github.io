@@ -5,6 +5,10 @@
   box-sizing: border-box;
   vertical-align: baseline;
   transition: $transition;
+  cursor: none;
+}
+html {
+  cursor: none;
 }
 img {
   display: block;
@@ -80,9 +84,7 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
-html {
-  height: 100%;
-}
+
 body {
   font-family: $rubik;
   background: $gray;
@@ -94,6 +96,26 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
+}
+.cs {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  background: url("../img/cursor.png") no-repeat center center;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 999;
+  transition: transform 0.2s;
+  img {
+    position: absolute;
+    opacity: 1;
+    &:nth-child(even) {
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: $break-extralarge) {
+    display: none;
+  }
 }
 
 .switch {
@@ -113,7 +135,6 @@ body {
 
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
@@ -161,7 +182,6 @@ input:checked + .slider:before {
   display: none;
   font-size: 3em;
   color: #c4c0c0;
-  cursor: pointer;
 }
 .light-mode {
   background: $white !important;
@@ -234,6 +254,21 @@ input:checked + .slider:before {
 
       &:hover {
         color: $lightest-slate !important;
+      }
+    }
+  }
+  .projects{
+    h2{
+      color: $light-gray;
+    }
+    .project{
+      .content-text{
+        h3{
+          color: $gray;
+        }
+        a{
+          color: $light-gray;
+        }
       }
     }
   }
