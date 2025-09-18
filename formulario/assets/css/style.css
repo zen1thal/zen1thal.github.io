@@ -167,10 +167,7 @@ h2 span {
   font-weight: 350;
 }
 
-.info h2 span {
-  position: absolute;
-  left: -40px;
-}
+
 .info label {
   width: 100%;
   text-align: left;
@@ -287,10 +284,6 @@ input[type="email"] {
   h2 {
     font-size: 20px;
   }
-  h2 span {
-    position: relative;
-    left: 0;
-  }
   .content-img img {
     height: 200px !important;
   }
@@ -319,9 +312,19 @@ input[type="email"] {
   }
 }
 @media screen and (max-width: 768px) {
+  .desktop {
+    display: none ;
+  }
+  .content-input{
+    margin-top: 20px;
+  }
   h1 {
     font-size: 25px !important;
     line-height: 20px !important;
+  }
+    h2 span {
+    position: relative;
+    left: 0;
   }
   .content-img img {
     height: 200px !important;
