@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Club de lectura</title>
+  </head>
+
+  <body>
+    <form action="miFormulario" id="miFormulario">
+      <main>
+        <section class="front">
+          <div class="container">
+            <div class="content-img">
+              <img src="assets/img/cars.png" alt="" />
+            </div>
+            <div class="content-welcome">
+              <h1>¡Bienvenidx al próximo club de lectura!</h1>
+              <p>Desliza para responder unas preguntas breves</p>
+            </div>
+
+            <div class="btn-container">
+              <button type="button" class="btn">Comenzar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+            <div class="content-time">
+              <i class="fa fa-clock" aria-hidden="true"></i>
+              <p>Toma 45 seg</p>
+            </div>
+          </div>
+        </section>
+        <section class="info hidden">
+          <div class="container">
+            <h2><span>1 .</span> Cuéntanos sobre ti</h2>
+            <div class="content-input">
+              <label>Nombre</label>
+              <input
+                type="text"
+                name="name"
+                id=""
+                placeholder="Mhelody"
+                required
+              />
+            </div>
+            <div class="content-input">
+              <label>Apellido(s)</label>
+              <input
+                type="text"
+                name="surname"
+                id=""
+                placeholder="Ramírez"
+                required
+              />
+            </div>
+            <div class="content-input">
+              <label>Correo electrónico</label>
+              <input
+                type="email"
+                name="email"
+                id=""
+                placeholder="nombre@ejemplo.com"
+                required
+              />
+            </div>
+            <p class="error-message hidden">
+              *Rellena por favor todos los campos
+            </p>
+
+            <div class="btn-container btn-left">
+              <button type="button" class="btn btn-s">Aceptar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="course hidden">
+          <div class="container">
+            <h2>
+              <span>2 .</span> ¿Qué estás estudiando y en qué curso estás?
+            </h2>
+            <div class="content-text">
+              <input
+                type="text"
+                name="course"
+                id=""
+                placeholder="Escribe aquí tu respuesta..."
+                required
+              />
+            </div>
+            <p class="error-message hidden">
+              *Rellena por favor todos los campos
+            </p>
+
+            <div class="btn-container btn-left">
+              <button type="button" class="btn btn-s">Aceptar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="genre hidden">
+          <div class="container">
+            <h2><span>3 .</span> ¿Qué géneros te gusta leer?</h2>
+            <div class="content-text">
+              <input
+                type="text"
+                name="genres"
+                id=""
+                placeholder="Escribe aquí tu respuesta..."
+                required
+              />
+            </div>
+            <p class="error-message hidden">
+              *Rellena por favor todos los campos
+            </p>
+
+            <div class="btn-container btn-left">
+              <button type="button" class="btn btn-s">Aceptar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="favorite hidden">
+          <div class="container">
+            <h2><span>4 .</span> ¿Cuál o cuáles son tus libros favoritos?</h2>
+            <div class="content-text">
+              <input
+                type="text"
+                name="favorite"
+                id=""
+                placeholder="Escribe aquí tu respuesta..."
+                required
+              />
+            </div>
+            <p class="error-message hidden">
+              *Rellena por favor todos los campos
+            </p>
+
+            <div class="btn-container btn-left">
+              <button type="button" class="btn btn-s">Aceptar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="books hidden">
+          <div class="container">
+            <h2>
+              <span>5 .</span> ¿Cuáles son los siguientes libros en tu lista?
+            </h2>
+            <div class="content-text">
+              <input
+                type="text"
+                name="list"
+                id=""
+                placeholder="Escribe aquí tu respuesta..."
+                required
+              />
+            </div>
+            <p class="error-message hidden">
+              *Rellena por favor todos los campos
+            </p>
+
+            <div class="btn-container btn-left">
+              <button type="button" class="btn btn-s">Aceptar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="timetable hidden">
+          <div class="container">
+            <h2>
+              <span>6 .</span> ¿Qué días y horarios te vienen mejor para las
+              reuniones?
+            </h2>
+            <select name="hours" id="select" required>
+              <option value="14:30-15:30">14:30-15:30</option>
+              <option value="5:00-16:00">15:00-16:00</option>
+              <option value="16:00-17:00">16:00-17:00</option>
+            </select>
+            <p class="error-message hidden">
+              * Rellena por favor todos los campos
+            </p>
+
+            <div class="btn-container btn-left">
+              <button type="submit" class="btn btn-s">Aceptar</button>
+              <p>pulsa <span>Enter</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="end hidden">
+          <div class="container">
+            <div class="content-img">
+              <img src="assets/img/cup.png" alt="" />
+            </div>
+            <h1>
+              ¡Gracias! 💞 Te avisaremos cuando pongamos las máquinas a escribir
+            </h1>
+            <p class="final-text">
+              (creado a mano por zviatos de manera voluntaria y gratuita)
+            </p>
+          </div>
+        </section>
+      </main>
+    </form>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
