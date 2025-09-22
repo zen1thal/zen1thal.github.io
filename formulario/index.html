@@ -175,17 +175,41 @@
         <section class="days hidden">
           <div class="container">
             <h2>
-              <span>6 .</span> ¿Qué días te vienen mejor para las
-              reuniones?
+              <span>6 .</span> ¿Qué días te vienen mejor para las reuniones?
             </h2>
-            <select name="days" id="select" required>
-              <option value="lunes">Lunes</option>
-              <option value="martes">Martes</option>
-              <option value="miércoles">Miércoles</option>
-              <option value="jueves">Jueves</option>
-            </select>
+            <div class="container-checkbox">
+              <div class="content-checkbox">
+                <div class="input">
+                  <input type="checkbox" name="lunes" id="lunes" data-group="days" />
+                  <label for="lunes">Lunes</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" name="martes" id="martes" data-group="days" />
+                  <label for="martes">Martes</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" name="miércoles" id="miércoles" data-group="days" />
+                  <label for="miércoles">Miércoles</label>
+                </div>
+              </div>
+              <div class="content-checkbox">
+                <div class="input">
+                  <input type="checkbox" name="jueves" id="jueves" data-group="days" />
+                  <label for="jueves">Jueves</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" name="viernes" id="viernes" data-group="days" />
+                  <label for="viernes">Viernes</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" name="todos" id="todos" data-group="days" />
+                  <label for="todos">Todos los días</label>
+                </div>
+              </div>
+            </div>
+
             <p class="error-message hidden">
-              * Rellena por favor todos los campos
+              * Por favor, selecciona al menos un día
             </p>
 
             <div class="btn-container btn-left">

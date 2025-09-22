@@ -10,11 +10,25 @@ const goToNextSection = () => {
   const errorMessage = currentSection.querySelector(".error-message");
 
   let allValid = true;
-  inputs.forEach((input) => {
-    if (!input.checkValidity()) {
+
+  // Custom validation for checkbox group
+  if (currentSection.classList.contains("days")) {
+    const dayCheckboxes = currentSection.querySelectorAll(
+      'input[data-group="days"]'
+    );
+    const isAnyDayChecked = Array.from(dayCheckboxes).some(
+      (checkbox) => checkbox.checked
+    );
+    if (!isAnyDayChecked) {
       allValid = false;
     }
-  });
+  } else {
+    inputs.forEach((input) => {
+      if (!input.checkValidity()) {
+        allValid = false;
+      }
+    });
+  }
 
   if (allValid) {
     if (errorMessage) {
@@ -69,7 +83,14 @@ form.addEventListener("submit", (e) => {
   if (!lastInput.checkValidity()) {
     const errorMessage = lastInputSection.querySelector(".error-message");
     if (errorMessage) errorMessage.classList.remove("hidden");
+    return;
   }
+
+  const selectedDays = Array.from(
+    form.querySelectorAll('input[data-group="days"]:checked')
+  )
+    .map((checkbox) => checkbox.name)
+    .join(", ");
 
   const data = {
     name: form.name.value,
@@ -79,7 +100,7 @@ form.addEventListener("submit", (e) => {
     genres: form.genres.value,
     favorite: form.favorite.value,
     list: form.list.value,
-    days: form.days.value,
+    days: selectedDays,
     hours: form.hours.value,
   };
 
