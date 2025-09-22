@@ -57,7 +57,7 @@ document.addEventListener("keydown", (e) => {
 
 // Form submission to Google Sheets
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxirlJkPSKrGYn3caXqbjnt-W7pe0PmXrSkBIYmKzfWXICJEO8wRnsA8KGHjLOuC6MO/exec";
+  "https://script.google.com/macros/s/AKfycbzI07I2UJm-BAcdQNYE1X3QK4Ytc6ofnqFP29Hd4qZ9ysUkxzeKgEEORR8HZSi3iSm-/exec";
 const form = document.getElementById("miFormulario");
 
 form.addEventListener("submit", (e) => {
@@ -79,6 +79,7 @@ form.addEventListener("submit", (e) => {
     genres: form.genres.value,
     favorite: form.favorite.value,
     list: form.list.value,
+    days: form.days.value,
     hours: form.hours.value,
   };
 
