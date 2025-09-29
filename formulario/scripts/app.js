@@ -119,7 +119,7 @@ form.addEventListener("submit", (e) => {
       sections[currentIndex].classList.add("hidden");
       sections[currentIndex + 1].classList.remove("hidden");
       form.reset();
-      window.location.href = 'final.html';
+      window.location.href = './final.html';
     })
     .catch((err) => {
       console.error("Error:", err);
