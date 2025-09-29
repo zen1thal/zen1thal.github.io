@@ -2,7 +2,6 @@ const sections = document.querySelectorAll("section");
 const buttons = document.querySelectorAll(".btn");
 let currentIndex = 0;
 
-
 // Function to validate inputs and sections
 const goToNextSection = () => {
   const currentSection = sections[currentIndex];
@@ -60,14 +59,13 @@ buttons.forEach((btn) => {
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    e.preventDefault(); 
+    e.preventDefault();
     const btn = sections[currentIndex].querySelector(".btn");
     if (btn) {
       btn.click();
     }
   }
 });
-
 
 // Form submission to Google Sheets
 const scriptURL =
@@ -77,7 +75,6 @@ const form = document.getElementById("miFormulario");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-
   const lastInputSection = sections[currentIndex];
   const lastInput = lastInputSection.querySelector("input, select");
   if (!lastInput.checkValidity()) {
@@ -85,7 +82,8 @@ form.addEventListener("submit", (e) => {
     if (errorMessage) errorMessage.classList.remove("hidden");
     return;
   }
-
+  document.querySelector(".timetable").classList.add("hidden");
+  document.querySelector(".loader").classList.remove("hidden");
   const selectedDays = Array.from(
     form.querySelectorAll('input[data-group="days"]:checked')
   )
@@ -106,7 +104,7 @@ form.addEventListener("submit", (e) => {
 
   fetch(scriptURL, {
     method: "POST",
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
     .then((res) => {
       if (res.ok) {
@@ -121,6 +119,5 @@ form.addEventListener("submit", (e) => {
     })
     .catch((err) => {
       console.error("Error:", err);
- 
     });
 });

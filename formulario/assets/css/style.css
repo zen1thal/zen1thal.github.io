@@ -68,7 +68,12 @@ h2 span {
   margin: 0 auto;
   position: relative;
 }
-
+.loading{
+  width: 100px;
+  height: 100px;
+  user-select: none;
+  pointer-events: none;
+}
 .front {
   display: flex;
   flex-direction: column;
