@@ -116,13 +116,11 @@ form.addEventListener("submit", (e) => {
     })
     .then((response) => {
       console.log("Success! Your response was recorded.", response);
-      sections[currentIndex].classList.add("hidden");
-      sections[currentIndex + 1].classList.remove("hidden");
       form.reset();
       window.location.href = '/formulario/final.html';
     })
     .catch((err) => {
       console.error("Error:", err);
-      alert("Something went wrong. Please try again.");
+ 
     });
 });
